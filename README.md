@@ -43,7 +43,7 @@ To install Schema Registry, you must use an appropriate template file, like `all
 ```
 sudo su -
 yum install -y git
-git clone https://github.com/fabiog1901/SingleNodeCDPCluster.git
+git clone https://github.com/msaltan/SingleNodeCDPCluster.git
 cd SingleNodeCDPCluster
 ```
 
@@ -52,12 +52,27 @@ The script `setup.sh` takes 3 arguments:
 - the template file.
 - OPTIONAL the Docker Device disk mount point.
 
-Example: create cluster without CDSW on AWS using default_template.json
+1. Example: create cluster without CDSW on AWS using default_template.json
 ```
+vm:M5.2xlarge
+
 $ ./setup.sh aws templates/base.json
+
+2. Example: create cluster without CDSW on Azure using default_template.json
+```
+vm:Azure Standard D8s v3 
+
+$ ./setup.sh azure templates/base.json
+
+3. Example: create cluster without CDSW on Google Cloud using default_template.json
+``` 
+vm: GCP n1-standard-8 
+
+$ ./setup.sh gcp templates/base.json
 ```
 
-Example: create cluster with CDSW on Azure using cdsw_template.json
+
+4. Example: create cluster with CDSW on Azure using cdsw_template.json
 ```
 $ ./setup.sh azure templates/iot_workshop.json /dev/sdc
 ```
