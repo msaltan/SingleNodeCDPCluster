@@ -57,13 +57,13 @@ The script `setup.sh` takes 3 arguments:
 vm:M5.2xlarge
 
 $ ./setup.sh aws templates/base.json
-
+```
 2. Example: create cluster without CDSW on Azure using default_template.json
 ```
 vm:Azure Standard D8s v3 
 
 $ ./setup.sh azure templates/base.json
-
+```
 3. Example: create cluster without CDSW on Google Cloud using default_template.json
 ``` 
 vm: GCP n1-standard-8 
